@@ -77,7 +77,7 @@ jobs:
         envkey_GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
         envkey_NEXTAUTH_URL: ${{ secrets.OPENSHIFT_SERVER }}
         envkey_NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-        directory: ${{ GITHUB_WORKSPACE }}
+        directory: ${{ env.GITHUB_WORKSPACE }}
         file_name: .env.local
 
     - name: Check for required secrets
