@@ -12,52 +12,52 @@ export default function SignIn({ providers }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-        <div class="2xl:container flex m-auto pt-10 justify-center">
-          <div class="relative lg:w-6/12 bg-white rounded-md shadow-md">
-            <div class="m-auto py-12 px-6 sm:p-20 xl:w-10/12">
-              <div role="hidden" class="mt-12 border-t">
-                  <span class="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 bg-white">Sign in with</span>
+        <div className="2xl:container flex m-auto pt-10 justify-center">
+          <div className="relative lg:w-6/12 bg-white rounded-md shadow-md">
+            <div className="m-auto py-12 px-6 sm:p-20 xl:w-10/12">
+              <div role="hidden" className="mt-12 border-t">
+                  <span className="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 bg-white">Sign in with</span>
               </div>
-              <div class="mt-12 grid grid-cols-1">
+              <div className="mt-12 grid grid-cols-1">
                 {Object.values(providers).map((provider) => (
-                  <button className="py-3 px-6 bg-white dark:bg-[#101111] border border-blue-400 shadow-sm rounded-lg hover:text-white dark:hover:text-[#101111] hover:bg-blue-400 dark:hover:bg-blue-400" onClick={() => signIn(provider.id, { callbackUrl: "/"})}>
-                    <div class="flex gap-4 items-center justify-center">
+                  <button key={provider.id} className="py-3 px-6 bg-white dark:bg-[#101111] border border-blue-400 shadow-sm rounded-lg hover:text-white dark:hover:text-[#101111] hover:bg-blue-400 dark:hover:bg-blue-400" onClick={() => signIn(provider.id, { callbackUrl: "/"})}>
+                    <div className="flex gap-4 items-center justify-center">
                       <FcGoogle className="scale-150"/>
-                      <span class="block w-max font-medium tracking-wide text-sm">{provider.name}</span>
+                      <span className="block w-max font-medium tracking-wide text-sm">{provider.name}</span>
                     </div>
                   </button>
                 ))}
               </div>
-              <div role="hidden" class="mt-12 border-t">
-                  <span class="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 dark:text-white bg-white dark:bg-[#101111]">Or</span>
+              <div role="hidden" className="mt-12 border-t">
+                  <span className="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 dark:text-white bg-white dark:bg-[#101111]">Or</span>
               </div>
-              <form action="" class="space-y-6 py-6">
+              <form action="" className="space-y-6 py-6">
                 <div>
                   <input 
                     type="email" 
                     placeholder="Email"
-                    class="w-full py-3 px-6 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                    className="w-full py-3 px-6 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
                   />
                 </div>
-                <div class="flex flex-col items-end">
+                <div className="flex flex-col items-end">
                   <input 
                     type="password" 
                     placeholder="Password"
-                    class="w-full py-3 px-6 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                    className="w-full py-3 px-6 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
                   />
-                  <button type="reset" class="w-max p-3 -mr-3">
-                    <span class="text-sm tracking-wide text-blue-600">Reset password?</span>
+                  <button type="reset" className="w-max p-3 -mr-3">
+                    <span className="text-sm tracking-wide text-blue-600">Reset password?</span>
                   </button>
                 </div>
                 <div>
-                  <button class="w-full px-6 py-3 rounded-lg bg-[#32cd32] transition hover:opacity-80 focus:bg-sky-600 active:bg-sky-800">
-                    <span class="font-semibold text-white text-lg">Sign in</span>
+                  <button className="w-full px-6 py-3 rounded-lg bg-[#32cd32] transition hover:opacity-80 focus:bg-sky-600 active:bg-sky-800">
+                    <span className="font-semibold text-white text-lg">Sign in</span>
                   </button>
                 </div>
               </form>
-              <div class="border-t pt-12">
-                <div class="space-y-2 text-center">
-                  <span class="block text-sm tracking-wide text-gray-500">By signing up, you agree to the Terms of Service. View our Privacy Policy.</span>
+              <div className="border-t pt-12">
+                <div className="space-y-2 text-center">
+                  <span className="block text-sm tracking-wide text-gray-500">By signing up, you agree to the Terms of Service. View our Privacy Policy.</span>
                 </div>
               </div>
             </div>
