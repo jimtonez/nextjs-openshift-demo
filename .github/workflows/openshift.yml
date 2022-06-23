@@ -183,6 +183,11 @@ jobs:
         namespace: ${{ env.OPENSHIFT_NAMESPACE }}
         port: ${{ env.APP_PORT }}
 
+    - name: Add secure route
+      run: |
+        oc delete route ${{ env.APP_NAME }}
+        oc create route edge --service=${{ env.APP_NAME }} --hostname=nextjs-openshift-demo-dev-jimtonez-dev.apps.sandbox.x8i5.p1.openshiftapps.com
+
     - name: Print application URL
       env:
         ROUTE: ${{ steps.deploy-and-expose.outputs.route }}
