@@ -40,7 +40,7 @@ export default function DropDownMenu() {
                         <li key="Account" className="flow-root">
                         <a
                             href="#"
-                            className="-m-3 p-3 flex items-center gap-4 rounded-md text-base font-medium text-black dark:text-white hover:bg-gray-50 dark:hover:bg-opacity-5 transition ease-in-out duration-150"
+                            className="cursor-pointer -m-3 p-3 flex items-center gap-4 rounded-md text-base font-medium text-black dark:text-white hover:bg-gray-50 dark:hover:bg-opacity-5 transition ease-in-out duration-150"
                         >
                             <UserCircleIcon className='flex-shrink-0 h-6 w-6 text-black dark:text-[#515151]' aria-hidden="true" />
                             <span className='text-sm font-normal'>Account</span>
