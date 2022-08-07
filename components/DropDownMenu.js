@@ -7,6 +7,7 @@ import {
     LogoutIcon,
 } from '@heroicons/react/outline'
 import { signOut, useSession } from 'next-auth/react'
+import { useRouter } from 'next/router';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -15,6 +16,7 @@ function classNames(...classes) {
 export default function DropDownMenu() {
 
     const { data: session } = useSession();
+    const router = useRouter();
 
   return (
     <Popover className="z-0 relative">
@@ -39,7 +41,7 @@ export default function DropDownMenu() {
                     <ul role="list" className="mt-1 space-y-6">
                         <li key="Account" className="flow-root">
                         <a
-                            href="#"
+                            onClick={() => router.push('/account')}
                             className="cursor-pointer -m-3 p-3 flex items-center gap-4 rounded-md text-base font-medium text-black dark:text-white hover:bg-gray-50 dark:hover:bg-opacity-5 transition ease-in-out duration-150"
                         >
                             <UserCircleIcon className='flex-shrink-0 h-6 w-6 text-black dark:text-[#515151]' aria-hidden="true" />
