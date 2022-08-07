@@ -20,7 +20,7 @@ export default function Conclusion () {
                             <h2 className='text-2xl font-bold'>Next.js is an awesome JavaScript Framework!</h2>
                             <p className='ml-4 text-lg'>✅ File-based routing + pre-rendering = high performance</p>
                             <p className='ml-4 text-lg'>✅ Powerful tools ready to use out of the box</p>
-                            <p className='ml-4 text-lg'>✅ Developer friendly</p>
+                            <p className='ml-4 text-lg'>✅ Developer friendly!</p>
                             <p className='ml-4 text-lg'>✅ Supports popular OAuth providers</p>
                             <p className='ml-4 text-lg'>✅ Deploy to OpenShift within minutes!</p>
                         </div>
